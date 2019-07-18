@@ -37,10 +37,17 @@ p {
 img {
   max-width: 100%;
   height: auto;
+  &:hover{
+      animation: shake-horizontal 1s linear;
+  }
 }
 
 .container {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+
+  @media @tablet{
+      width: 95%;
+  }
 }
