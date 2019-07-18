@@ -5,6 +5,14 @@
  border-radius: @radius;
 }
 
+.transition (@prop: all, @time: 1s, @ease: linear) {
+ -webkit-transition: @prop @time @ease;
+ -moz-transition: @prop @time @ease;
+ -o-transition: @prop @time @ease;
+ -ms-transition: @prop @time @ease;
+ transition: @prop @time @ease;
+}
+
 .button(@bg-color: @button-bg){
     border: 1px solid @silver;
     background-color: @bg-color;
@@ -14,4 +22,20 @@
     text-align: center;
     .border-radius(10px);
     width: 100%;
+    .transition(all, 0.5s, linear);
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.flex(@direction: row, @justify: center, @align: center){
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.top{
+    border-bottom: 2px dashed @navigation-border;
 }
